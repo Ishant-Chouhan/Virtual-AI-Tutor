@@ -29,7 +29,7 @@ while True:
 
 
 
-    genai.configure(api_key="AIzaSyC3pCAiP_jYxMrYO8C6alZzCYTrP11EE8A")
+    genai.configure(api_key="*******")
     model = genai.GenerativeModel("gemini-1.5-flash")
     response = model.generate_content(f"you are a teacher, teaching a student and giving a mature and simplified answer in easy english. It should be in 100 words. the query asked by that student is{query} in english, here is an output coming from a RAG model that is {from_rag} and a dicionary is given that is {history} it is history of the questions that student has asked previously along with the answers you have given means in ( query : answer format ) so that you should give answer accordingly. Don't reveal that you are using any reference and don't use any kind of  character like '*' and only use paragraph.")
     mytext=response.text
